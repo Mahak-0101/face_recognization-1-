@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working of the Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./background/14.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            animation: slideInFromTop 0.8s ease-out;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            animation: slideInFromBottom 0.8s ease-out;
+            line-height: 1.6;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #1e90ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background: #1c86ee;
+            transform: translateY(-2px);
+        }
+
+        .note {
+            animation: blink 1.5s step-start infinite;
+            margin-top: 20px;
+            display: block;
+            font-size: 1.2em;
+            color: #ffeb3b;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Our Web Application</h1>
+        <p>
+            This application contains both face recognition and detection. Using this web application, you will save a lot of time and become more productive. This app also helps with security purposes, allowing you to monitor what happens in a building and identify who was present at a particular incident.
+        </p>
+        <p>
+            To know how it works in the backend, please click the link below.
+        </p>
+        <a href="./face-api-js-starter-main/public/index.html">FOR KNOWING HOW IT WORKS IN THE BACKEND, CLICK HERE</a>
+        <span class="note">#NOTE: This will show you the age probability.</span>
+    </div>
+</body>
+
+</html>

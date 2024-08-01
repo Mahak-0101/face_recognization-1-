@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Face Recognition</title>
+    <style>
+        video,
+        canvas {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to face recognization</h1><br>
+    <video id="video" width="720" height="560" autoplay muted></video>
+    <canvas id="canvas" width="720" height="560"></canvas>
+
+    <script src="./face-api.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

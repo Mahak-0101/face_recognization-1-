@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('./background/WhatsApp Image 2024-07-18 at 1.05.12 PM.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .header {
+            width: 100%;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .header img {
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.555);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            width: 200px;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+            display: block;
+            margin: 10px 0;
+            transition: color 0.3s;
+        }
+        
+        .card a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h3>Welcome</h3><br>
+        <h1>Attendance Management System</h1>
+    </div>
+    <br>
+    <br <div class="container">
+    <div class="card-container">
+        <div class="card">
+            <a href="add_student.html">Add Student</a>
+        </div>
+        <div class="card">
+            <a href="./face-api-js-starter-main(2)/public/index.html">Mark Attendance</a>
+        </div>
+        <div class="card">
+            <a href="get_student.php">Update Student Data</a>
+        </div>
+        <div class="card">
+            <a href="delete_student.php">Delete Student</a>
+        </div>
+        <div class="card">
+            <a href="view_student_data.html">View student data</a>
+        </div>
+        <div class="card">
+            <a href="./face-api-js-starter-main (1)/public/index.html">View Student Activity</a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

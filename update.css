@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("./background/14.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /* Darker text color for better readability */
+}
+
+header {
+    padding: 40px;
+    /* Increased padding */
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    /* Larger font size */
+}
+
+section {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.527);
+    /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input,
+select,
+textarea {
+    margin: 5px 0 15px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: all 0.3s ease;
+    /* Smooth transition for form fields */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle box shadow */
+    font-size: 16px;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #4CAF50;
+    /* Hover effect for form fields */
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 24px;
+    /* Rounded corners */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for button */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+/* Confirmation Message Styles */
+
+#confirmation {
+    display: none;
+    background-color: #dff0d8;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer h5 {
+    margin: 0;
+}
+
+#footer p {
+    margin: 5px;
+}
+
+.required::after {
+    content: ' *';
+    color: red;
+}

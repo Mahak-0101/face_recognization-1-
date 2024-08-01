@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Face Detection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        #container {
+            position: relative;
+            width: 720px;
+            height: 560px;
+        }
+        
+        video {
+            width: 100%;
+            height: auto;
+        }
+        
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to face Detection</h1>
+    <div id="container">
+        <video id="video" width="720" height="560" autoplay muted></video>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <script src="./face-api.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

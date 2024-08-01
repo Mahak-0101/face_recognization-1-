@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="add_student.css">
+</head>
+
+<body>
+    <header>
+        <h1>WELCOME TO THE REGISTRATION FORM</h1>
+    </header>
+    <section>
+        <h2>Please enter details below to create your account:</h2>
+        <br>
+        <form id="registration-form" action="add_student.php" method="post">
+
+            <label for="name" class="required">Name:</label>
+            <input type="text" placeholder="e.g., Ram" name="name" id="name" required>
+
+            <label for="roll_number" class="required">Roll Number:</label>
+            <input type="text" placeholder="e.g., 22049c04032" name="roll_no" id="roll_number" required>
+
+            <label for="branch" class="required">Branch:</label>
+            <select name="branch" id="branch">
+                <option value="CSE">Computer Science and Engineering</option>
+                <option value="FT">Fashion Technology</option>
+                <option value="AID">Architecture and Interior Department</option>
+                <option value="HMCT">Hotel Management and Catering Technology Department</option>
+            </select>
+
+            <label for="dob" class="required">Date of Birth:</label>
+            <input type="date" name="dob" id="dob" required>
+
+            <label for="phone" class="required">Mobile Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-45-678" required>
+
+            <label class="required">Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+
+            <label for="sem" class="required">Semester:</label>
+            <select name="sem" id="sem">
+                <option value="1st">1st Semester</option>
+                <option value="2nd">2nd Semester</option>
+                <option value="3rd">3rd Semester</option>
+                <option value="4th">4th Semester</option>
+                <option value="5th">5th Semester</option>
+                <option value="6th">6th Semester</option>
+            </select>
+
+            <label for="email" class="required">Email id:</label>
+            <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="address" class="required"> Address:</label>
+            <textarea cols="60" rows="5" placeholder="Enter your address" name="address" id="address" required></textarea>
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        <div id="confirmation">Thank you for your submission!</div>
+    </section>
+    <footer>
+        <div id="footer">
+            <h5>Developed by Mahak Saxena</h5>
+        </div>
+    </footer>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var rollNo = document.getElementById('roll_number').value;
+            var branch = document.getElementById('branch').value;
+            var dob = document.getElementById('dob').value;
+            var phone = document.getElementById('phone').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var sem = document.getElementById('sem').value;
+            var email = document.getElementById('email').value;
+            var address = document.getElementById('address').value;
+
+            // Check if any required field is empty
+            if (name === "" || rollNo === "" || branch === "" || dob === "" || phone === "" || gender === null || sem === "" || email === "" || address === "") {
+                alert("Please fill out all required fields.");
+                return false;
+            }
+
+            // Additional validation for email format
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Additional validation for phone format
+            var phonePattern = /^\d{3}-\d{2}-\d{3}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid phone number (e.g., 123-45-678).");
+                return false;
+            }
+
+            // If all validations pass, allow form submission
+            return true;
+        }
+    </script>
+</body>
+
+</html>
